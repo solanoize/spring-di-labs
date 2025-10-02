@@ -4,7 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import com.solanoize.labs.service.EmailService;
-import com.solanoize.labs.service.MessageService;
 import com.solanoize.labs.service.SMSService;
 import com.solanoize.labs.service.WhatsappService;
 
