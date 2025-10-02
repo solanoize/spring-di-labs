@@ -10,10 +10,12 @@ import org.testng.annotations.Test;
 import com.solanoize.labs.configuration.AppConfiguration;
 import com.solanoize.labs.manager.MessageManager;
 
+
 public class AppTest {
   
   private ConfigurableApplicationContext context;
   private MessageManager messageManager;
+
 
   @BeforeMethod
   public void setUp() {
@@ -28,7 +30,7 @@ public class AppTest {
 
   @Test(priority = 2)
   public void messageMustBeValidByService() {
-    Assert.assertEquals(messageManager.processMessage("Hello Bro"), "Email: Hello Bro");
+    Assert.assertEquals(messageManager.processSMS("Hello Bro"), "SMS: Hello Bro");
   }
 
   @Test(priority = 3)
