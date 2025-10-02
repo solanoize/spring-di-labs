@@ -34,5 +34,5 @@ mvn clean test
 
 ## Catatan
 
-- Semua dependensi sudah ada di pom.xml, tidak perlu instalasi tambahan.
+- Semua dependensi sudah ada di `pom.xml`, tidak perlu instalasi tambahan.
 - Selama program dibuat, saya menggunakan versi Java 17.
