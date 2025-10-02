@@ -29,11 +29,21 @@ public class AppTest {
   }
 
   @Test(priority = 2)
-  public void messageMustBeValidByService() {
+  public void messageMustBeSMSService() {
     Assert.assertEquals(messageManager.processSMS("Hello Bro"), "SMS: Hello Bro");
   }
 
   @Test(priority = 3)
+  public void messageMustBeEmailService() {
+    Assert.assertEquals(messageManager.processEmail("Hello Bro"), "Email: Hello Bro");
+  }
+
+  @Test(priority = 4)
+  public void messageMustBeWhatsappService() {
+    Assert.assertEquals(messageManager.processWhatsapp("Hello Bro"), "Whatsapp: Hello Bro");
+  }
+
+  @Test(priority = 5)
   public void beanMustBeSingleton() {
     Assert.assertSame(messageManager, context.getBean(MessageManager.class));
   }
