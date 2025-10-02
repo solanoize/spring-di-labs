@@ -28,7 +28,7 @@ public class AppTest {
 
   @Test(priority = 2)
   public void messageMustBeValidByService() {
-    Assert.assertEquals(messageManager.processMessage("Hello Bro"), "SMS: Hello Bro");
+    Assert.assertEquals(messageManager.processMessage("Hello Bro"), "Email: Hello Bro");
   }
 
   @Test(priority = 3)

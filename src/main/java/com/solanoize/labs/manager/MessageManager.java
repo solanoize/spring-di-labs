@@ -8,12 +8,9 @@ import com.solanoize.labs.service.MessageService;
 
 @Component
 public class MessageManager {
-  private MessageService messageService;
-
   @Autowired
-  public MessageManager(@Qualifier("smsService") MessageService messageService) {
-    this.messageService = messageService;
-  }
+  @Qualifier("emailService")
+  private MessageService messageService;
 
   public String processMessage(String message) {
     return messageService.sendMessage(message);
