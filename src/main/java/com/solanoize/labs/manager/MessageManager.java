@@ -11,8 +11,7 @@ public class MessageManager {
   private MessageService messageService;
 
   @Autowired
-  @Qualifier("whatsappService")
-  public void setMessageService(MessageService messageService) {
+  public MessageManager(@Qualifier("smsService") MessageService messageService) {
     this.messageService = messageService;
   }
 
