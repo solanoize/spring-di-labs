@@ -15,18 +15,14 @@ import com.solanoize.labs.service.WhatsappService;
 @Component
 public class MessageManager {
 
-    private MessageService emailService;
-    private MessageService whatsappService;
-    private MessageService smsService;
+    @Autowired
+    private EmailService emailService;
 
     @Autowired
-    public void setEmailService(EmailService service) { this.emailService = service; }
+    private WhatsappService whatsappService;
 
     @Autowired
-    public void setWhatsappService(WhatsappService service) { this.whatsappService = service; }
-
-    @Autowired
-    public void setSMSService(SMSService service) { this.smsService = service; }
+    private SMSService smsService;
 
     public String processEmail(String message) { return emailService.sendMessage(message); }
     public String processWhatsapp(String message) { return whatsappService.sendMessage(message); }
