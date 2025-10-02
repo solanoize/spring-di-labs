@@ -8,9 +8,10 @@ Repository ini berisi eksperimen praktis terkait Dependency Injection (DI) di Sp
 - Menerapkan berbagai metode DI secara langsung.
 
 ## Branch
-- `main` → DI Based on Constructor
-- `di/setter` → DI Based on Setter
-- `di/field` → DI Based on Field
+- `main`: Full Implementasi
+- `di/constructor`: DI Based on Constructor
+- `di/setter`: DI Based on Setter
+- `di/field`: DI Based on Field
 
 ## Cara Menggunakan
 
